@@ -6,9 +6,9 @@
             "host": "api.github.com",
             "pathPrefix": "/api/v3",
             "headers": {
-                "ueser-agent": "git-rank"
+                "user-agent": "git-rank"
             },
-            "follow-redirects": false,
+            "followRedirects": false,
             "timeout": 5000
         }
     }

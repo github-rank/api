@@ -22,8 +22,8 @@
   },
   "homepage": "https://github.com/FakeMethodology/git-rank#readme",
   "dependencies": {
-    "bluebird": "^3.4.3",
     "config": "^1.21.0",
-    "github": "^2.5.2"
+    "github": "^2.5.2",
+    "vow": "^0.4.12"
   }
 }
