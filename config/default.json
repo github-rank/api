@@ -1,9 +1,10 @@
 {
     "providers": {
         "github": {
+            "debug": false,
             "protocol": "https",
             "host": "api.github.com",
-            "pathPrefix": "/api/v3",
+            "pathPrefix": "",
             "headers": {
                 "user-agent": "git-rank"
             },

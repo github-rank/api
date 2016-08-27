@@ -5,18 +5,17 @@ const config = require('config');
 
 const githubConfig = config.get('providers.github');
 
-const githubProvider = new GithubApi({
-    debug: githubConfig.debug,
-    protocol: githubConfig.protocol,
-    host: githubConfig.host,
-    pathPrefix: githubConfig.pathPrefix,
-    headers: githubConfig.headers,
-    followRedirects: githubConfig.followRedirects,
-    timeout: githubConfig.timeout,
-    promise: require('vow').Promise
-});
-
 module.exports = {
+    _githubProvider: new GithubApi({
+        debug: githubConfig.debug,
+        protocol: githubConfig.protocol,
+        host: githubConfig.host,
+        pathPrefix: githubConfig.pathPrefix,
+        headers: githubConfig.headers,
+        followRedirects: githubConfig.followRedirects,
+        timeout: githubConfig.timeout,
+        promise: require('vow').Promise
+    }),
 
     /**
      * Возвращает пользователя GitHub
@@ -25,7 +24,7 @@ module.exports = {
      * @returns {Promise}
      */
     getUser(username) {
-        return githubProvider.users.getForUser({
+        return this._githubProvider.users.getForUser({
             user: username
         });
     },
@@ -37,7 +36,7 @@ module.exports = {
      * @returns {Promise}
      */
     getUserRepos(username) {
-        return githubProvider.repos.getForUser({
+        return this._githubProvider.repos.getForUser({
             user: username
         });
     },
@@ -50,7 +49,7 @@ module.exports = {
      * @returns {Promise}
      */
     getRepoContributes(username, repo) {
-        return githubProvider.repos.getContributors({
+        return this._githubProvider.repos.getContributors({
             user: username,
             repo: repo
         });
