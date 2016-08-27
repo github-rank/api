@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/FakeMethodology/git-rank/issues"
   },
-  "homepage": "https://github.com/FakeMethodology/git-rank#readme"
+  "homepage": "https://github.com/FakeMethodology/git-rank#readme",
+  "dependencies": {
+    "bluebird": "^3.4.3",
+    "config": "^1.21.0",
+    "github": "^2.5.2"
+  }
 }

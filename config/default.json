@@ -1,0 +1,15 @@
+{
+    "providers": {
+        "github": {
+            "access-token": "my-access-token",
+            "protocol": "https",
+            "host": "api.github.com",
+            "pathPrefix": "/api/v3",
+            "headers": {
+                "ueser-agent": "git-rank"
+            },
+            "follow-redirects": false,
+            "timeout": 5000
+        }
+    }
+}
