@@ -1,7 +1,6 @@
 {
     "providers": {
         "github": {
-            "access-token": "my-access-token",
             "protocol": "https",
             "host": "api.github.com",
             "pathPrefix": "/api/v3",

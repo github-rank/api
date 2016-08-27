@@ -1,3 +1,5 @@
+'use strict';
+
 const GithubApi = require('github');
 const config = require('config');
 
@@ -11,7 +13,7 @@ const githubProvider = new GithubApi({
     headers: githubConfig.headers,
     followRedirects: githubConfig.followRedirects,
     timeout: githubConfig.timeout,
-    promise: require('vow')
+    promise: require('vow').Promise
 });
 
 module.exports = {
