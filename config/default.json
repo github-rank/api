@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "github": {
+            "protocol": "https",
+            "host": "api.github.com",
+            "pathPrefix": "/api/v3",
+            "headers": {
+                "user-agent": "git-rank"
+            },
+            "followRedirects": false,
+            "timeout": 5000
+        }
+    }
+}
